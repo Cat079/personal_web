@@ -213,9 +213,45 @@ a:focus-visible { outline: 2px solid var(--mint); outline-offset: 5px; }
 .project-main { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .project-details { max-width: 760px; }
 .project-details .project-tags { margin-top: 10px; }
-.source-button { display: inline-flex; min-height: 43px; flex: 0 0 auto; align-items: center; gap: 15px; padding: 0 16px; border: 1px solid rgba(108, 243, 213, 0.32); border-radius: 8px; background: rgba(108, 243, 213, 0.08); color: #c6fff2; font-size: 12px; transition: background 180ms ease, border-color 180ms ease, transform 180ms ease; }
+.project-actions { display: flex; flex: 0 0 auto; flex-wrap: wrap; gap: 10px; }
+.source-button { display: inline-flex; min-height: 43px; flex: 0 0 auto; align-items: center; justify-content: center; gap: 15px; padding: 0 16px; border: 1px solid rgba(108, 243, 213, 0.32); border-radius: 8px; background: rgba(108, 243, 213, 0.08); color: #c6fff2; font-family: inherit; font-size: 12px; text-decoration: none; cursor: pointer; transition: background 180ms ease, border-color 180ms ease, transform 180ms ease; }
 .source-button:hover { transform: translateY(-2px); border-color: rgba(108, 243, 213, 0.65); background: rgba(108, 243, 213, 0.15); }
 .source-button span { font-size: 15px; }
+.play-button { border-color: rgba(167, 139, 250, 0.4); background: rgba(167, 139, 250, 0.1); color: #e2d9ff; }
+.play-button:hover { border-color: rgba(167, 139, 250, 0.78); background: rgba(167, 139, 250, 0.2); }
+
+/* 暗色科技风猜数字游戏弹窗 */
+.game-modal { position: fixed; inset: 0; width: min(490px, calc(100% - 32px)); max-width: none; max-height: min(88vh, 720px); margin: auto; padding: 0; overflow: auto; border: 1px solid rgba(108, 243, 213, 0.24); border-radius: 18px; background: radial-gradient(ellipse at 100% 0, rgba(108, 243, 213, 0.12), transparent 38%), radial-gradient(ellipse at 0 100%, rgba(167, 139, 250, 0.14), transparent 42%), #0e1521; box-shadow: 0 28px 100px rgba(0, 0, 0, 0.62), 0 0 45px rgba(108, 243, 213, 0.08); color: var(--text); color-scheme: dark; }
+.game-modal::backdrop { background: rgba(3, 7, 14, 0.78); backdrop-filter: blur(9px); }
+.game-modal-inner { padding: clamp(22px, 6vw, 34px); }
+.game-modal-top { display: flex; align-items: center; justify-content: space-between; }
+.game-kicker { margin: 0; color: #8392a8; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; letter-spacing: 0.16em; }
+.game-kicker span { padding-inline: 5px; color: var(--mint); }
+.game-close { display: grid; width: 34px; height: 34px; place-items: center; padding: 0; border: 1px solid rgba(182, 201, 231, 0.14); border-radius: 9px; background: rgba(255, 255, 255, 0.035); color: #b8c5d8; font-family: inherit; font-size: 23px; line-height: 1; cursor: pointer; transition: border-color 180ms ease, color 180ms ease, background 180ms ease; }
+.game-close:hover { border-color: rgba(108, 243, 213, 0.45); background: rgba(108, 243, 213, 0.08); color: var(--mint); }
+.game-modal h2 { margin: 19px 0 7px; font-size: clamp(23px, 5vw, 29px); font-weight: 620; letter-spacing: -0.035em; }
+.game-description { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.game-score { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; padding: 13px 15px; border: 1px solid rgba(182, 201, 231, 0.1); border-radius: 10px; background: rgba(255, 255, 255, 0.035); color: #9ba9bd; font-size: 12px; }
+.game-score strong { color: var(--mint); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 21px; font-weight: 600; }
+.game-score small { margin-left: 4px; color: #9ba9bd; font-family: inherit; font-size: 11px; font-weight: 400; }
+.game-status { display: flex; min-height: 53px; align-items: center; margin: 13px 0 21px; padding: 10px 13px; border: 1px solid rgba(108, 243, 213, 0.15); border-radius: 9px; background: rgba(108, 243, 213, 0.055); color: #c8f7eb; font-size: 13px; line-height: 1.55; }
+.game-status[data-state="high"], .game-status[data-state="low"] { border-color: rgba(167, 139, 250, 0.28); background: rgba(167, 139, 250, 0.08); color: #d9d0ff; }
+.game-status[data-state="success"] { border-color: rgba(108, 243, 213, 0.45); background: rgba(108, 243, 213, 0.12); color: #baffea; }
+.game-status[data-state="error"] { border-color: rgba(255, 154, 154, 0.35); background: rgba(255, 126, 126, 0.08); color: #ffc4c4; }
+.game-form label { display: block; margin-bottom: 8px; color: #aab7ca; font-size: 11px; }
+.game-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 9px; }
+.game-controls input { width: 100%; min-width: 0; height: 46px; padding: 0 13px; border: 1px solid rgba(182, 201, 231, 0.17); border-radius: 9px; outline: none; background: rgba(3, 8, 15, 0.42); color: #effbf8; font: inherit; font-size: 14px; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.game-controls input::placeholder { color: #637187; }
+.game-controls input:focus { border-color: rgba(108, 243, 213, 0.68); box-shadow: 0 0 0 3px rgba(108, 243, 213, 0.1); }
+.game-controls input:disabled { opacity: 0.65; }
+.game-submit { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 15px; padding: 0 15px; border: 1px solid rgba(108, 243, 213, 0.35); border-radius: 9px; background: linear-gradient(120deg, rgba(108, 243, 213, 0.16), rgba(114, 170, 255, 0.13)); color: #dcfff6; font: inherit; font-size: 12px; cursor: pointer; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, opacity 180ms ease; }
+.game-submit:hover:not(:disabled) { transform: translateY(-1px); border-color: rgba(108, 243, 213, 0.7); background: linear-gradient(120deg, rgba(108, 243, 213, 0.25), rgba(114, 170, 255, 0.22)); }
+.game-submit:disabled { opacity: 0.45; cursor: not-allowed; }
+.game-submit span { color: var(--mint); font-size: 15px; }
+.game-restart { margin-top: 17px; padding: 0; border: 0; background: transparent; color: #aebbd0; font: inherit; font-size: 12px; cursor: pointer; transition: color 180ms ease; }
+.game-restart:hover { color: var(--mint); }
+.game-footnote { margin: 17px 0 0; padding-top: 14px; border-top: 1px solid rgba(182, 201, 231, 0.09); color: #78869b; font-size: 10px; }
+.game-modal button:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
 
 /* 联系方式和页脚 */
 .contact-section { padding-top: 112px; }
@@ -283,6 +319,8 @@ a:focus-visible { outline: 2px solid var(--mint); outline-offset: 5px; }
   .hobby-symbol { top: 6px; right: 12px; font-size: 48px; }
   .project-card { min-height: 230px; padding: 20px; }
   .project-main { align-items: flex-start; flex-direction: column; gap: 18px; }
+  .project-actions { width: 100%; }
+  .project-actions .source-button { min-width: 0; flex: 1 1 auto; gap: 8px; padding-inline: 11px; }
   .project-description { font-size: 12px; }
   .contact-panel { min-height: 0; align-items: stretch; flex-direction: column; gap: 23px; padding: 25px 20px; }
   .contact-panel h2 { font-size: 27px; }
@@ -290,6 +328,11 @@ a:focus-visible { outline: 2px solid var(--mint); outline-offset: 5px; }
   .email-arrow { margin-left: auto; }
   .site-footer { min-height: 92px; flex-wrap: wrap; justify-content: space-between; row-gap: 0; margin-top: 30px; padding-block: 18px; }
   .site-footer p { order: 3; width: 100%; }
+}
+
+@media (max-width: 380px) {
+  .game-controls { grid-template-columns: minmax(0, 1fr); }
+  .game-submit { width: 100%; }
 }
 
 @media (max-width: 767px) {
