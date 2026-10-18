@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d16">
+  <meta name="description" content="陈榆阳的个人主页，智能科学与技术专业学生。">
+  <title>陈榆阳 · 个人主页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部阅读进度条 -->
+  <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="页面阅读进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <span class="reading-progress-fill" id="reading-progress-fill"></span>
+  </div>
+
+  <!-- 页面背景装饰 -->
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="pointer-glow" id="pointer-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="陈榆阳个人主页首页">
+      <span class="brand-mark">CY</span>
+      <span>个人主页</span>
+    </a>
+    <a class="header-link" href="#contact">联系我 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <!-- 个人简介 -->
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> HELLO, WORLD</p>
+        <h1 id="hero-title">你好，我是<br><span class="gradient-text name-typewriter">陈榆阳</span></h1>
+        <p class="hero-role">智能科学与技术 <span class="role-divider">/</span> 大二学生</p>
+        <p class="hero-intro">专注于智能科学与技术，热爱探索代码背后的底层逻辑。目前正致力于夯实 C/C++ 与 Python 基础，并积极探索 AI Agent 在实际开发中的应用。</p>
+        <a class="primary-button" href="#about">认识我 <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="hero-art" role="img" aria-label="动态科技感几何线条图形">
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <div class="orbit-node node-top"></div>
+        <div class="orbit-node node-bottom"></div>
+        <div class="signal-core" aria-hidden="true">
+          <span class="signal-ring signal-ring-outer"></span>
+          <span class="signal-ring signal-ring-inner"></span>
+          <span class="signal-diamond"></span>
+          <span class="signal-center">CY</span>
+        </div>
+        <span class="signal-caption"><span class="signal-pulse"></span> 持续探索中 <span class="signal-caption-en">/ ALWAYS CURIOUS</span></span>
+        <div class="particle-field" aria-hidden="true">
+          <span class="particle particle-one"></span>
+          <span class="particle particle-two"></span>
+          <span class="particle particle-three"></span>
+          <span class="particle particle-four"></span>
+          <span class="particle particle-five"></span>
+          <span class="particle particle-six"></span>
+          <span class="particle particle-seven"></span>
+          <span class="particle particle-eight"></span>
+        </div>
+        <span class="art-coordinate coordinate-top">31°N 121°E</span>
+        <span class="art-coordinate coordinate-bottom">BUILD · LEARN · REPEAT</span>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> 向下探索</div>
+    </section>
+
+    <!-- 技能与个人介绍 -->
+    <section class="content-section section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2 id="about-title">保持好奇，<span class="gradient-text">持续进步。</span></h2>
+        <p class="section-description">从基础开始，一点点积累，把感兴趣的事情变成真正的能力。</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="info-card skill-card interactive-card">
+          <div class="card-depth">
+            <div class="card-topline"><span class="card-index">01</span><span class="card-icon" aria-hidden="true">⌘</span></div>
+            <h3>Python</h3>
+            <p>掌握基础语法与数据结构，能编写自动化脚本。正在探索数据爬取与 AI 应用。</p>
+            <div class="skill-tags"><span>编程基础</span><span>持续学习</span></div>
+            <div class="progress-track" aria-label="学习进度：起步中"><span class="progress-python"></span></div>
+          </div>
+        </article>
+
+        <article class="info-card skill-card interactive-card">
+          <div class="card-depth">
+            <div class="card-topline"><span class="card-index">02</span><span class="card-icon card-icon-blue" aria-hidden="true">{ }</span></div>
+            <h3>C 语言</h3>
+            <p>深入理解指针与内存管理，打好计算机底层基石，追求严谨的代码逻辑。</p>
+            <div class="skill-tags"><span>基础语法</span><span>持续学习</span></div>
+            <div class="progress-track" aria-label="学习进度：起步中"><span class="progress-c"></span></div>
+          </div>
+        </article>
+
+        <article class="info-card focus-card interactive-card">
+          <div class="card-depth">
+            <div class="focus-orb" aria-hidden="true">✦</div>
+            <p class="focus-label">CURRENT FOCUS</p>
+            <h3>智能科学<br>与技术</h3>
+            <p class="focus-copy">保持热爱，认真学习，让每一次尝试都向前一步。</p>
+            <span class="focus-decoration" aria-hidden="true">AI&nbsp;·&nbsp;IDEAS&nbsp;·&nbsp;YOU</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 兴趣爱好 -->
+    <section class="content-section section-shell" aria-labelledby="hobbies-title">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">OFF THE SCREEN</p>
+          <h2 id="hobbies-title">生活里的<span class="gradient-text">热爱</span></h2>
+        </div>
+        <p class="section-description">学习之外，也给生活留一点热血和快乐。</p>
+      </div>
+
+      <div class="hobbies-grid">
+        <article class="hobby-card football-card interactive-card">
+          <div class="card-depth">
+            <div class="hobby-number">01 / HOBBY</div>
+            <div class="hobby-symbol" aria-hidden="true">⚽</div>
+            <div class="hobby-text"><h3>踢足球</h3><p>喜欢踢的位置是中后场，参加过去年理工杯比赛，享受绿茵场上的团队协作与战术配合。足球不仅带来汗水，更锻炼了我的快速决断力。</p></div>
+            <span class="hobby-arrow" aria-hidden="true">↗</span>
+          </div>
+        </article>
+        <article class="hobby-card gaming-card interactive-card">
+          <div class="card-depth">
+            <div class="hobby-number">02 / HOBBY</div>
+            <div class="hobby-symbol game-symbol" aria-hidden="true">🎮</div>
+            <div class="hobby-text"><h3>玩游戏</h3><p>常玩 CS、火影忍者、FC 足球世界等游戏，是硬核竞技与独立游戏爱好者。常以开发者视角思考游戏背后的交互设计与物理引擎。</p></div>
+            <span class="hobby-arrow" aria-hidden="true">↗</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 过往项目与竞赛经历 -->
+    <section class="content-section section-shell" aria-labelledby="past-projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">PAST PROJECTS</p>
+        <h2 id="past-projects-title">过往<span class="gradient-text">项目</span></h2>
+        <p class="section-description">记录竞赛经历与项目实践中的积累。</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card past-project-card interactive-card">
+          <div class="card-depth">
+            <div class="project-card-top">
+              <span class="project-index">01 / COMPETITION</span>
+              <span class="project-mark" aria-hidden="true">✦</span>
+            </div>
+            <div>
+              <h3>竞赛与项目实践</h3>
+              <p class="project-description">获得过“挑战杯”校三等奖。去年省数学建模大赛中，我独自用一天完成项目，最终没有获奖。</p>
+            </div>
+            <div class="project-tags"><span>挑战杯校三等奖</span><span>省数学建模大赛</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 近期项目 -->
+    <section class="content-section section-shell" aria-labelledby="recent-projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">RECENT PROJECTS</p>
+        <h2 id="recent-projects-title">近期<span class="gradient-text">项目</span></h2>
+        <p class="section-description">正在学习，也在用代码完成小而具体的尝试。</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card recent-project-card interactive-card">
+          <div class="card-depth">
+            <div class="project-card-top">
+              <span class="project-index">01 / PYTHON PROJECT</span>
+              <span class="project-mark project-mark-blue" aria-hidden="true">{ }</span>
+            </div>
+            <div class="project-main">
+              <div class="project-details">
+                <h3>Guess Number Game</h3>
+                <div class="project-tags"><span>Python</span><span>Git</span></div>
+                <p class="project-description">使用 Python 编写的命令行猜数字游戏。代码已通过 Git 推送至 GitHub。</p>
+              </div>
+              <a class="source-button" href="https://github.com/Cat079/guess-number-game" target="_blank" rel="noopener noreferrer">查看源码 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2 id="contact-title">保持联系，<span class="gradient-text">一起交流。</span></h2>
+          <p class="contact-copy">欢迎通过邮件与我联系。</p>
+        </div>
+        <button class="email-link" id="copy-email" type="button" aria-label="复制邮箱地址 3309608896@qq.com">
+          <span class="email-icon" aria-hidden="true">✉</span>
+          <span>3309608896@qq.com</span>
+          <span class="email-arrow" aria-hidden="true">⧉</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">CY</span><span>陈榆阳</span></a>
+    <p>© 2026 陈榆阳 · 用好奇心探索世界</p>
+    <a class="back-to-top" href="#top">回到顶部 ↑</a>
+  </footer>
+
+  <!-- 复制邮箱后显示的轻量提示 -->
+  <div class="toast" id="copy-toast" role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast-check" aria-hidden="true">✓</span>
+    <span class="toast-message">邮箱已复制！</span>
+  </div>
+
+  <script>
+    // 卡片进入视口时再播放渐入动画。
+    const interactiveCards = document.querySelectorAll(".interactive-card");
+    interactiveCards.forEach((card) => card.classList.add("reveal-on-scroll"));
+
+    if ("IntersectionObserver" in window) {
+      document.documentElement.classList.add("js-motion");
+      const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14, rootMargin: "0px 0px -24px 0px" });
+
+      interactiveCards.forEach((card) => cardObserver.observe(card));
+    } else {
+      // 不支持 IntersectionObserver 的旧浏览器直接显示卡片。
+      interactiveCards.forEach((card) => card.classList.add("is-visible"));
+    }
+
+    // 点击邮箱按钮复制地址，并在页面右下角显示 Toast。
+    const emailAddress = "3309608896@qq.com";
+    const copyButton = document.querySelector("#copy-email");
+    const toast = document.querySelector("#copy-toast");
+    const toastMessage = toast.querySelector(".toast-message");
+    let toastTimer;
+
+    function showToast(message, isError = false) {
+      toastMessage.textContent = message;
+      toast.classList.toggle("toast-error", isError);
+      toast.classList.add("is-visible");
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 2800);
+    }
+
+    function fallbackCopyEmail() {
+      const temporaryInput = document.createElement("textarea");
+      temporaryInput.value = emailAddress;
+      temporaryInput.setAttribute("readonly", "");
+      temporaryInput.style.position = "fixed";
+      temporaryInput.style.opacity = "0";
+      document.body.appendChild(temporaryInput);
+      temporaryInput.select();
+      const copied = document.execCommand("copy");
+      temporaryInput.remove();
+      if (!copied) throw new Error("复制失败");
+    }
+
+    async function copyEmail() {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(emailAddress);
+          } catch {
+            // 剪贴板权限不可用时，再尝试兼容性复制方式。
+            fallbackCopyEmail();
+          }
+        } else {
+          // 本地文件或非安全上下文时，使用兼容性复制方式。
+          fallbackCopyEmail();
+        }
+        showToast("邮箱已复制！");
+      } catch {
+        showToast("复制失败，请手动复制邮箱。", true);
+      }
+    }
+
+    copyButton.addEventListener("click", copyEmail);
+
+    // 更新顶部阅读进度条。
+    const progressTrack = document.querySelector("#reading-progress");
+    const progressFill = document.querySelector("#reading-progress-fill");
+
+    function updateReadingProgress() {
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
+      progressFill.style.transform = `scaleX(${progress})`;
+      progressTrack.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
+    }
+
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+    updateReadingProgress();
+
+    // 桌面鼠标效果共用断点，手机端不会安装指针移动监听。
+    const cardTiltQuery = window.matchMedia("(min-width: 768px) and (hover: hover) and (pointer: fine)");
+    const pointerGlow = document.querySelector("#pointer-glow");
+
+    function updatePointerGlow(event) {
+      if (event.pointerType === "touch") return;
+      pointerGlow.style.left = `${event.clientX}px`;
+      pointerGlow.style.top = `${event.clientY}px`;
+    }
+
+    function setPointerGlowEnabled(enabled) {
+      if (enabled) {
+        window.addEventListener("pointermove", updatePointerGlow, { passive: true });
+      } else {
+        window.removeEventListener("pointermove", updatePointerGlow);
+      }
+    }
+
+    // 仅在桌面鼠标环境启用卡片聚光和倾斜，尺寸变化时同步启停监听。
+    function updateCardLighting(event) {
+      const card = event.currentTarget;
+      const bounds = card.getBoundingClientRect();
+      const pointerX = Math.min(1, Math.max(0, (event.clientX - bounds.left) / bounds.width));
+      const pointerY = Math.min(1, Math.max(0, (event.clientY - bounds.top) / bounds.height));
+
+      card.style.setProperty("--spot-x", `${pointerX * 100}%`);
+      card.style.setProperty("--spot-y", `${pointerY * 100}%`);
+      card.style.setProperty("--rotate-x", `${(0.5 - pointerY) * 9}deg`);
+      card.style.setProperty("--rotate-y", `${(pointerX - 0.5) * 11}deg`);
+      card.classList.add("is-pointer-active");
+    }
+
+    function clearCardLighting(card) {
+      card.style.removeProperty("--spot-x");
+      card.style.removeProperty("--spot-y");
+      card.style.removeProperty("--rotate-x");
+      card.style.removeProperty("--rotate-y");
+      card.classList.remove("is-pointer-active");
+    }
+
+    function resetCardLighting(event) {
+      clearCardLighting(event.currentTarget);
+    }
+
+    function setCardLightingEnabled(enabled) {
+      interactiveCards.forEach((card) => {
+        if (enabled) {
+          card.addEventListener("pointermove", updateCardLighting, { passive: true });
+          card.addEventListener("pointerleave", resetCardLighting);
+        } else {
+          card.removeEventListener("pointermove", updateCardLighting);
+          card.removeEventListener("pointerleave", resetCardLighting);
+          clearCardLighting(card);
+        }
+      });
+    }
+
+    function updateDesktopEffects(enabled) {
+      setCardLightingEnabled(enabled);
+      setPointerGlowEnabled(enabled);
+    }
+
+    updateDesktopEffects(cardTiltQuery.matches);
+    if (cardTiltQuery.addEventListener) {
+      cardTiltQuery.addEventListener("change", (event) => updateDesktopEffects(event.matches));
+    } else {
+      cardTiltQuery.addListener((event) => updateDesktopEffects(event.matches));
+    }
+
+    // 平滑滚轮：给垂直滚轮输入增加缓动；缩放、横向手势与减少动态效果设置保持原生行为。
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!prefersReducedMotion) {
+      let wheelFrame = null;
+      let targetScroll = window.scrollY;
+      let previousScrollBehavior = "";
+
+      function animateWheelScroll() {
+        const currentScroll = window.scrollY;
+        const remainingDistance = targetScroll - currentScroll;
+        if (Math.abs(remainingDistance) < 1) {
+          window.scrollTo(0, targetScroll);
+          document.documentElement.style.scrollBehavior = previousScrollBehavior;
+          wheelFrame = null;
+          return;
+        }
+        window.scrollTo(0, currentScroll + remainingDistance * 0.14);
+        wheelFrame = window.requestAnimationFrame(animateWheelScroll);
+      }
+
+      window.addEventListener("wheel", (event) => {
+        // 保留浏览器缩放和横向滚动的原生手势。
+        if (event.ctrlKey || event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+        const wheelDelta = event.deltaMode === WheelEvent.DOM_DELTA_LINE
+          ? event.deltaY * 24
+          : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+            ? event.deltaY * window.innerHeight
+            : event.deltaY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        event.preventDefault();
+        if (wheelFrame === null) {
+          targetScroll = window.scrollY;
+          previousScrollBehavior = document.documentElement.style.scrollBehavior;
+          // 逐帧滚动由下方缓动控制，避免 CSS 平滑行为叠加。
+          document.documentElement.style.scrollBehavior = "auto";
+        }
+        targetScroll = Math.min(maxScroll, Math.max(0, targetScroll + wheelDelta));
+        if (wheelFrame === null) wheelFrame = window.requestAnimationFrame(animateWheelScroll);
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>
